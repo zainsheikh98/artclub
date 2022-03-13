@@ -1,0 +1,71 @@
+.modal-enter
+    opacity: 0
+    & > div
+        transform: translateY(10px)
+
+.modal-enter-active
+    opacity: 1
+    transition: opacity .2s
+    & > div
+        transform: translateY(0)
+        transition: transform .2s
+
+.modal-exit
+    opacity: 1
+
+.modal-exit-active
+    opacity: 0
+    transition: opacity .2s
+    & > div
+        transform: translateY(10px)
+        transition: transform .2s
+
+.alert-enter
+    opacity: 0
+    transform: translateX(10px)
+
+.alert-enter-active
+    opacity: 1
+    transform: translateX(0)
+    transition: opacity .2s, transform .2s
+
+.alert-exit
+    opacity: 1
+
+.alert-exit-active
+    opacity: 0
+    transform: translateX(10px)
+    transition: opacity .2s, transform .2s
+    
+@keyframes fadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+    
+.fadeIn
+    animation-name: fadeIn
+    
+@keyframes fadeInLeft
+    0%
+        transform: translateX(-20px)
+        opacity: 0
+    100%
+        transform: translateX(0px)
+        opacity: 1
+    
+.fadeInLeft
+    animation-name: fadeInLeft
+
+@keyframes fadeInRight
+    0%
+        transform: translateX(20px)
+        opacity: 0
+    100%
+        transform: translateX(0px)
+        opacity: 1
+    
+.fadeInRight
+    animation-name: fadeInRight
+
+    

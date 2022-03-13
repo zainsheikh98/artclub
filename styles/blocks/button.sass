@@ -1,0 +1,42 @@
+[class^="button"]
+    display: inline-flex
+    text-align: center
+    align-items: center
+    justify-content: center
+    height: 56px
+    padding: 0 22px
+    background: $purple
+    border: 2px solid $purple
+    border-radius: 12px
+    +base1
+    color: white
+    transition: background .2s, border-color .2s, color .2s
+    &:hover
+        background: #a881af
+        border-color: #a881af
+    &[disabled]
+        background: $shade1
+        border-color: $shade1
+        cursor: not-allowed
+    svg
+        margin-right: 10px
+        fill: white
+
+.button-stroke
+    border-color: $n6
+    background: transparent
+    color: $n6
+    &:hover
+        border-color: $n6
+        background: $n6
+        color: $n1
+
+.button-small
+    padding: 14px
+    font-size: 14px
+    min-height: 50px
+
+
+.button-large
+    padding: 32px
+    min-height: 70px

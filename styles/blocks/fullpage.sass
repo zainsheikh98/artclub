@@ -1,0 +1,40 @@
+.app
+    &.fp-viewing-0,
+    &.fp-viewing-5
+        #fp-nav.fp-left
+            opacity: 0
+
+    #fp-nav.fp-left
+        left: calc(50% - 660px)
+        transition: opacity .2s
+        +w
+            left: 28px
+    #fp-nav ul li
+        width: 12px
+        height: 12px
+        margin: 16px 0
+
+        &:first-child,
+        &:last-child
+            display: none
+
+        +w
+            width: 8px
+            height: 8px
+            margin: 12px 0
+        a
+            border: 2px solid $n7
+            border-radius: 50%
+            transition: background .2s
+            +d
+                border-width: 1px
+            &.active
+                background: $n7
+        span
+            display: none
+
+.fp-section.fp-table,
+.fp-slide.fp-table,
+.fp-tableCell
+    +m
+        height: auto !important
