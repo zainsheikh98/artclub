@@ -1,0 +1,198 @@
+@import ../../styles/helpers
+
+.head
+    position: relative
+    padding: 158px 0
+    border-bottom: 1px solid $n3
+    text-align: center
+    +d
+        padding: 106px 0
+    +t
+        padding: 86px 0
+
+.title
+    margin-bottom: 12px
+    +m
+        font-size: 40px
+        line-height: 48px
+
+.date
+    margin-bottom: 0
+
+.body
+    background: $n0
+    +t
+        padding-top: 40px
+
+.row
+    display: flex
+    +t
+        display: block
+
+.col
+    &:nth-child(1)
+        flex-shrink: 0
+        width: 296px
+        padding-top: 112px
+        padding-bottom: 112px
+        +d
+            width: 232px
+            padding-top: 80px
+            padding-bottom: 80px
+        +t
+            width: 100%
+            padding: 0
+    &:nth-child(2)
+        flex-grow: 1
+        border-left: 1px solid $n3
+        +t
+            border: none
+            
+.menu
+    position: sticky
+    top: 128px
+    li
+        position: relative
+        &:not(:last-child)
+            margin-bottom: 40px
+            +x
+                margin-bottom: 32px
+    a
+        display: block
+        padding-right: 50px
+        +caption1
+        color: $n7
+        cursor: pointer
+        transition: color .2s
+        &:after
+            content: ""
+            position: absolute
+            top: 6px
+            right: -5px
+            width: 9px
+            height: 9px
+            border-radius: 50%
+            background: $purple
+            transform: scale(0)
+            transition: transform .2s
+        &:hover
+            color: $purple
+        &.active
+            &:after
+                transform: scale(1)
+
+.section
+    padding: 80px 0 80px 120px
+    +d
+        padding: 64px 0 64px 64px
+    +t
+        padding: 40px 0
+    &:first-child
+        padding-top: 112px
+        +d
+            padding-top: 80px
+        +t
+            padding-top: 40px
+    &:last-child
+        padding-bottom: 412px
+        +t
+            padding-bottom: 64px
+    &:not(:last-child)
+        border-bottom: 1px solid $n3
+
+.content
+    +body2M
+    color: $n4
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+        margin-bottom: 48px
+        +roobert
+        letter-spacing: -0.02em
+        color: $n7
+        +m
+            margin-bottom: 24px
+    h1
+        font-size: 64px
+        line-height: 64px
+
+    h2
+        font-size: 56px
+        line-height: 64px
+        +d
+            font-size: 48px
+            line-height: 56px
+        +m
+            font-size: 40px
+            line-height: 48px
+    h3
+        font-size: 48px
+        line-height: 48px
+        font-weight: 600
+    h4
+        font-size: 40px
+        line-height: 48px
+        font-weight: 600
+        +t
+            font-size: 32px
+            line-height: 40px
+    h5
+        font-size: 32px
+        line-height: 40px
+        font-weight: 600
+        +d
+            font-size: 24px
+            line-height: 32px
+        +m
+            font-size: 22px
+            line-height: 29px
+    h6
+        font-size: 24px
+        line-height: 32px
+        font-weight: 600
+    p
+        &:not(:last-child)
+            margin-bottom: 28px
+    strong
+        font-weight: 600
+        color: $n7
+    blockquote
+        padding: 32px
+        background: rgba($purple, .1)
+        border-radius: 16px
+        font-weight: 600
+        color: $n7
+        &:not(:first-child)
+            margin-top: 48px
+        &:not(:last-child)
+            margin-bottom: 48px
+    ul
+        li
+            position: relative
+            padding-left: 29px
+            &:before
+                content: ""
+                position: absolute
+                top: 12px
+                left: 11px
+                width: 5px
+                height: 5px
+                border-radius: 50%
+                background: $n4
+            &:not(:last-child)
+                margin-bottom: 28px
+            ul
+                margin-top: 28px
+        &:not(:last-child)
+            margin-bottom: 28px
+    a
+        white-space: nowrap
+        font-weight: 600
+        color: $purple
+        transition: color .2s
+        &:hover
+            color: rgba($purple, .8)
+

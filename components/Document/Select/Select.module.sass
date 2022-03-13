@@ -1,0 +1,53 @@
+@import ../../../styles/helpers
+
+.select
+    position: relative
+    &.active
+        .head
+            border-color: rgba(106, 85, 234, 0.75)
+            svg
+                transform: translateY(-50%) rotate(180deg) 
+        .menu
+            visibility: visible
+            opacity: 1
+
+.head
+    display: flex
+    align-items: center
+    height: 48px
+    padding: 0 46px 0 14px
+    border: 2px solid $n3
+    border-radius: 12px
+    +base2
+    transition: border-color .2s
+    svg
+        position: absolute
+        top: 50%
+        right: 12px
+        transform: translateY(-50%)
+        fill: $n4
+        transition: transform .2s
+
+.menu
+    position: absolute
+    top: calc(100% + 4px)
+    left: 0
+    right: 0
+    padding: 16px
+    background: $n0
+    box-shadow: 0px 16px 48px -12px rgba(0, 0, 0, 0.2)
+    border-radius: 12px
+    visibility: hidden
+    opacity: 0
+    transition: all .2s
+    li
+        &:not(:last-child)
+            margin-bottom: 16px
+    a
+        display: block
+        +caption1
+        color: $n7
+        cursor: pointer
+        transition: color .2s
+        &.active
+            color: $purple

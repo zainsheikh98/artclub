@@ -1,0 +1,125 @@
+@import ../../../styles/helpers
+
+.hero
+    position: relative
+    height: 1229px
+    margin-top: 88px
+    padding: 122px 0 210px
+    overflow: hidden
+    +d
+        height: 936px
+        padding: 82px 0 210px
+    +m
+        height: 740px
+        padding: 100px 0 100px
+
+.wrap
+    position: relative
+    z-index: 3
+    max-width: 740px
+    margin: 0 auto
+    text-align: center
+
+.title
+    color: $n0
+    margin-bottom: 70px
+    +d
+        margin-bottom: 16px
+    +m
+        margin-bottom: 28px
+
+.background
+    position: absolute
+    top: 0
+    left: 50%
+    bottom: 0
+    width: 2920px
+    transform: translate(-49.4%, -88px)
+    +d
+        width: 2080px
+        transform: translate(-50.2%, -38px)
+    +m
+        width: 1850px
+        transform: translate(-50.2%, 0px)
+    & > img
+        width: 100%
+        object-fit: cover
+
+.media
+    position: absolute
+    animation: levitation 6s ease infinite
+    &:nth-child(1)
+        top: 15.6%
+        left: calc(50% - 900px)
+        +d
+            left: calc(50% - 630px)
+            width: 300px
+        +t
+            left: calc(50% - 580px)
+        +m
+            top: 7%
+            left: calc(50% - 385px)
+            width: 230px
+    &:nth-child(2)
+        top: 29.4%
+        left: calc(50% - 525px)
+        animation-delay: .4s
+        +d
+            top: 28.7%
+            left: calc(50% - 357px)
+            width: 155px
+        +t
+            left: calc(50% - 310px)
+        +m
+            top: 26.2%
+            left: calc(50% - 250px)
+            width: 125px
+    &:nth-child(3)
+        top: 11.4%
+        right: calc(50% - 470px)
+        +d
+            top: 11.9%
+            right: calc(50% - 352px)
+            width: 155px
+        +t
+            top: 8%
+            right: calc(50% - 302px)
+        +m
+            right: calc(50% - 240px)
+            width: 110px
+    &:nth-child(4)
+        top: 21.4%
+        right: calc(50% - 755px)
+        animation-delay: .4s
+        +d
+            top: 21%
+            right: calc(50% - 555px)
+            width: 190px
+        +t
+            top: 26%
+            right: calc(50% - 450px)
+        +m
+            top: 23%
+            right: calc(50% - 280px)
+            width: 110px
+    &:nth-child(5)
+        top: 12.5%
+        left: calc(50% - 504px)
+        +d
+            left: calc(50% - 340px)
+            width: 65px
+        +t
+            top: 8%
+            left: calc(50% - 240px)
+    img
+        +d
+            width: 100%
+
+@keyframes levitation
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(10%)
+    100%
+        transform: translateY(0)
+        

@@ -1,0 +1,181 @@
+@import ../../styles/helpers
+    
+.footer
+    padding: 64px 0 24px
+    +d
+        padding-top: 32px
+    +m
+        padding: 78px 0 24px
+
+.container
+    +d
+        padding: 0 40px
+    +t
+        padding: 0 32px
+    +m
+        padding: 0 24px
+
+.inner
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: 68px
+    +d
+        margin-bottom: 56px
+    +t
+        align-items: flex-start
+        margin-bottom: 8px
+    +m
+        margin-bottom: 40px
+
+.logo
+    +t
+        order: 1
+
+.nav
+    position: relative
+    margin-left: 40px
+    padding-left: 30px
+    +d
+        margin-left: 32px
+    +t
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        order: 3
+        margin: 0
+        padding: 0
+    +m
+        flex: 0 0 100%
+        order: 4
+        margin-top: 32px
+        display: block
+        column-count: 2
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 2px
+        height: 100%
+        background: $n3
+        border-radius: 2px
+        +t
+            display: none
+    a
+        margin-right: 20px
+        padding: 4px 12px
+        +base2
+        color: $n4
+        transition: color .2s
+        +t
+            margin: 0 0 24px
+            padding: 0
+        +m
+            display: block
+            margin: 0 0 20px
+        &:hover
+            color: $n8
+
+.button
+    margin-left: auto
+    +t
+        order: 4
+    +m
+        order: 3
+        margin: 0
+
+.title
+    flex: 0 0 100%
+    margin-top: 56px
+    +body2
+    text-align: center
+    +d
+        margin-top: 48px
+    +t
+        order: 2
+        margin: 12px 0 32px
+        padding-bottom: 32px
+        border-bottom: 1px solid $n3
+        text-align: left
+    +m
+        padding: 0
+        border: none
+
+.bottom
+    display: flex
+    padding-top: 24px
+    border-top: 1px solid $n3
+    +caption2M
+    align-items: center
+    +t
+        flex-wrap: wrap
+
+.copyright
+    color: $n4
+    +t
+        order: 3
+        width: 100%
+        margin-top: 12px
+
+.rights
+    +m
+        display: block
+    &:before
+        content: "|"
+        margin: 0 4px
+        color: $n3
+        +m
+            display: none
+
+.links
+    display: flex
+    margin-left: auto
+    +t
+        order: 1
+        margin: 0 auto 0 0
+    +m
+        width: 100%
+        margin: 0
+
+.link
+    margin-left: 32px
+    color: $n4
+    transition: color .2s
+    +t
+        margin-left: 0
+    &:not(:last-child)
+        +t
+            margin-right: 32px
+        +m
+            margin-right: auto
+    &:hover
+        color: $n8
+
+.languages
+    display: flex
+    margin-left: 24px
+    padding: 4px
+    background: $n3
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1)
+    border-radius: 8px
+    +t
+        order: 2
+    +m
+        margin: 12px 0 0
+    a,
+    button
+        padding: 4px 12px
+        +caption2
+        color: rgba($n4,.6)
+        transition: all .2s
+        font-size: 18px
+        &:not(:last-child)
+            margin-right: 2px
+        &:hover
+            color: $n7
+        &.active
+            background: $n2
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #FFFFFF
+            border-radius: 6px
+            color: $n7

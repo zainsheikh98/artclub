@@ -1,0 +1,161 @@
+@import ../../styles/helpers
+
+.header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 80
+    padding: 0px 0px 24px 0
+    // transition: all .2s
+    +d
+        padding: 0px 0px 24px 0
+    +t
+        padding: 0px 0px 24px 0
+    .container
+        display: flex
+        align-items: center
+        max-width: 100%
+        padding: 0 40px
+        +d
+            padding: 0 20px
+        +m
+            padding: 0 16px
+    &.visible
+        background: $n1
+        box-shadow: 0px 1px 0px #E6EBF0
+    &.filled
+        background: $n1
+
+.logo
+    margin-right: 40px
+    // +m
+    //     margin-right: auto
+    // svg
+    //     +m
+    //         width: 94px
+    //         height: 13px
+    // span
+    //     +m
+    //         width: 32px
+
+.wrapper
+    +t
+        position: fixed
+        top: 72px
+        right: 0
+        left: 0
+        bottom: 0
+        display: none
+        flex-direction: column
+        padding: 24px 0 16px
+        background: $n1
+        border-top: 1px solid $n3
+        // visibility: hidden
+        // opacity: 0
+        transition: visibility .2s, opacity .2s
+        &.visible
+            display: flex
+            // visibility: visible
+            // opacity: 1
+    +m
+        padding: 0
+        overflow: auto
+
+.nav
+    position: relative
+    display: flex
+    align-items: center
+    padding-left: 30px
+    +t
+        display: block
+        padding-left: 0
+    &:before
+        content: ""
+        position: absolute
+        top: 4px
+        left: 0
+        bottom: 4px
+        border-radius: 1px
+        width: 2px
+        background: $n3
+        +t
+            display: none
+
+.link
+    padding: 2px 10px
+    border-radius: 8px
+    border-width: 2px
+    border-style: solid
+    border-color: transparent
+    +base2
+    color: $n4
+    transition: border-color .2s, box-shadow .2s, color .2s
+    +t
+        display: block
+        padding: 0 24px
+        border-width: 0 0 0 2px
+        border-radius: 0
+        font-size: 21px
+        line-height: 40px
+    +m
+        font-size: 16px
+    &:hover
+        color: $n7
+    &.active
+        border-color: $n7
+        box-shadow: 0px 5px 0px -2px rgba(111, 91, 234, 0.34)
+        color: $n7
+        +t
+            border-color: $purple
+            box-shadow: none
+
+.link,
+.dropdown
+    &:not(:last-child)
+        margin-right: 20px
+        +t
+            margin-right: 0
+            margin-bottom: 20px
+        +m
+            margin-bottom: 4px
+
+.dropdown
+    &:not(:last-child)
+        +m
+            margin-bottom: 16px
+
+.button
+    margin-left: auto
+
+.burger
+    display: none
+    position: relative
+    z-index: 3
+    flex: 0 0 24px
+    height: 24px
+    margin-left: 24px
+    +t
+        display: block
+    +m
+        margin-left: 16px
+    &.active
+        &:before
+            transform: translateY(0) rotate(-45deg)
+        &:after
+            transform: translateY(0) rotate(45deg)
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        top: 11px
+        left: 2px
+        width: 20px
+        height: 2px
+        background: $n7
+        border-radius: 2px
+        transition: transform .2s
+    &:before
+        transform: translateY(-4px)  
+    &:after
+        transform: translateY(4px)

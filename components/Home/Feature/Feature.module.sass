@@ -1,0 +1,52 @@
+@import ../../../styles/helpers
+
+.feature
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 2
+    margin-bottom: 24px
+    padding: 80px 96px
+    border-radius: 32px
+    +shadow1
+    +d
+        margin-bottom: 18px
+        padding: 64px
+    +m
+        display: block
+        margin-bottom: 16px
+        padding: 32px
+        border-radius: 24px
+
+.avatar
+    flex: 0 0 360px
+    height: 360px
+    border-radius: 50%
+    border: 2px solid $n3
+    margin-right: 80px
+    +d
+        flex: 0 0 240px
+        height: 240px
+        margin-right: 64px
+    +m
+        width: 280px
+        height: 280px
+        margin: 0 auto 40px
+    img
+        height: 100%
+        border-radius: 50%
+        object-fit: cover
+
+.quote
+    margin-bottom: 32px
+
+.name
+    +d
+        font-size: 16px
+        line-height: 24px
+
+.position
+    +body2M
+    color: $n4
+    +d
+        +base2

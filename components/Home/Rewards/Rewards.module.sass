@@ -1,0 +1,236 @@
+@import ../../../styles/helpers
+
+.section
+    position: relative
+    padding-top: 75px
+    +d
+        padding-top: 0
+    +m
+        margin-top: -8px
+
+.container
+    +d
+        padding: 0 32px
+
+.head
+    max-width: 770px
+    margin-bottom: 98px
+    +d
+        margin-bottom: 76px
+    +m
+        margin-bottom: 84px
+
+.title
+    max-width: 740px
+    +d
+        max-width: 600px
+
+.info
+    margin-top: 32px
+    +d
+        margin-top: 16px
+    +m
+        margin-top: 20px
+
+.pattern
+    position: absolute
+    top: -55px
+    left: 50%
+    z-index: -1
+    width: 943px
+    transform: translateX(-50%)
+    +d
+        top: -152px
+    +m
+        top: -40px
+        width: 706px
+
+.list
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    +d
+        margin: 0 -42px
+    +t
+        display: block
+        margin: 0
+    +m
+        margin: 0 -8px
+    
+.item
+    max-width: 320px
+    padding: 40px
+    border-radius: 24px
+    +d
+        flex: 0 0 calc(33.333% - 84px)
+        max-width: calc(33.333% - 84px)
+        margin: 0 42px
+        padding: 24px
+    +t
+        max-width: 100%
+        margin: 0
+    &:nth-child(2n+1)
+        margin-bottom: 80px
+        +d
+            margin-bottom: 84px
+        +t
+            margin-bottom: 0
+    &:not(:last-child)
+        +t
+            position: relative
+            margin-bottom: 32px
+            &:after
+                content: ""
+                position: absolute
+                top: calc(100% - 10px)
+                left: 40px
+                z-index: 1
+                width: 8px
+                height: 63px
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='63' fill='none' viewBox='0 0 8 63'%3E%3Cpath fill='%236a55ea' d='M3 4h2v53H3z'/%3E%3Cg fill='%23fff' stroke='%236a55ea' stroke-width='1.5'%3E%3Ccircle cx='4' cy='4' r='3.25'/%3E%3Ccircle cx='4' cy='59' r='3.25'/%3E%3C/g%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+
+.icon
+    margin-bottom: 24px
+
+.subtitle
+    margin-bottom: 12px
+
+.content
+    margin-bottom: 32px
+    +base1M
+
+.preview
+    box-shadow: 0px 16px 48px -12px rgba(0, 0, 0, 0.2)
+    border-radius: 12px
+    overflow: hidden
+    font-size: 0
+    +t
+        display: inline-block
+    span
+        display: block !important
+        +t
+            display: block !important
+    img
+        object-fit: cover
+
+.box
+    position: absolute
+    z-index: 2
+    &:nth-child(1)
+        bottom: 39.3%
+        left: calc(50% - 675px)
+        +t
+            top: 230px
+            left: auto
+            right: 70px
+            bottom: auto
+        +m
+            top: 48.4%
+            right: 190px
+        .avatar
+            width: 40px
+    &:nth-child(2)
+        bottom: 46%
+        left: calc(50% - 295px)
+        +d
+            left: calc(50% - 235px)
+            bottom: 54%
+        +t
+            top: 530px
+            left: auto
+            right: 250px
+            bottom: auto
+        +m
+            top: 21.5%
+            right: 75px
+    &:nth-child(3)
+        left: calc(50% - 248px)
+        bottom: 19%
+        +d
+            left: calc(50% - 200px)
+            bottom: 21.3%
+        +t
+            left: auto
+            right: 150px
+        +m
+            right: 8px
+            bottom: 59.8%
+    &:nth-child(4)
+        bottom: 22%
+        right: calc(50% - 232px)
+        +d
+            bottom: 30.6%
+            right: calc(50% - 184px)
+        +t
+            right: 50px
+        +m
+            right: 76px
+            bottom: 23%
+    &:nth-child(5)
+        bottom: 32px
+        right: calc(50% - 500px)
+        +d
+            right: calc(50% - 413px)
+            bottom: 24px
+        +t
+            right: 30px
+        +m
+            display: none
+        .avatar
+            width: 40px
+    &:nth-child(6)
+        bottom: 41.5%
+        right: calc(50% - 685px)
+        +t
+            right: 300px
+            bottom: -20px
+        +m
+            display: none
+
+.avatar
+    width: 32px
+    border-radius: 50%
+    font-size: 0
+    overflow: hidden
+    img
+        width: 100%
+
+.image
+    position: absolute
+    pointer-events: none
+    +t
+        display: none
+    &:nth-child(1)
+        left: calc(50% - 345px)
+        bottom: 190px
+        +d
+            bottom: 142px
+            left: calc(50% - 260px)
+    &:nth-child(2)
+        left: calc(50% - 305px)
+        bottom: 268px
+        +d
+            left: calc(50% - 260px)
+            bottom: 285px
+            width: 140px
+            transform: rotate(10deg)
+    &:nth-child(3)
+        right: calc(50% - 308px)
+        bottom: 237px
+        +d
+            right: calc(50% - 225px)
+            bottom: 275px
+            width: 110px
+    &:nth-child(4)
+        right: calc(50% - 650px)
+        bottom: 120px
+        +d
+            right: calc(50% - 620px)
+            bottom: 104px
+            width: 450px
+        +m
+            display: block
+            right: 50%
+            bottom: 0
+            transform: translateX(53%)
+
